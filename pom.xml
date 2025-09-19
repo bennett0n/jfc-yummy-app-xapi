@@ -49,7 +49,7 @@
 		<dependency>
 			<groupId>94ae4f55-1948-49e6-aa22-797c335784d4</groupId>
 			<artifactId>jfc-yummy-app-xapi</artifactId>
-			<version>1.0.0</version>
+			<version>1.0.3</version>
 			<classifier>raml</classifier>
 			<type>zip</type>
 		</dependency>
