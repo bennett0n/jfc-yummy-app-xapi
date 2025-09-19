@@ -1,0 +1,10 @@
+
+api-id: "20524871"
+
+order-sapi:
+  protocol: "HTTPS"
+  host: "jfc-order-sapi-3jkxjn.5sc6y6-1.usa-e2.cloudhub.io"
+  port: "443"
+  base: "/api"
+  client_id: "![Q0gQiQUz/kmC08JRY7ifX4xUgV4kV/scc3nWumkRCah+StRSeJRNig==]"
+  client_secret: "![Mx4mDTdZo0kezwJHFgOjLQqYi1PpdjV7T/0v1cAsn8GvGsQeHlJ+nw==]"

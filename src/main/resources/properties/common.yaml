@@ -1,0 +1,13 @@
+
+app:
+  order-prefix: "01"
+  order-source: "Yummy App"
+
+listener:
+  protocol: "HTTP"
+  host: "0.0.0.0"
+  port: "8081"
+
+paths:
+  get-orders: "/orders/{orderId}"
+  post-orders: "/orders"
