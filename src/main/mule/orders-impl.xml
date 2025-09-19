@@ -14,7 +14,7 @@
                 <http:query-params><![CDATA[#[output application/java
 ---
 {
-	"source" : "Yummy App"
+	"source" : p('app.order-source')
 }]]]></http:query-params>
             </http:request>
             <error-handler>
