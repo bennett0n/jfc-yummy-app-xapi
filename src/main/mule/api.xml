@@ -41,9 +41,9 @@ output application/json
         </error-handler>
     </flow> [STUDIO] -->
     <flow name="get:\orders\(orderReference):api-config">
-		<flow-ref doc:name="get-orders-sub-flow" doc:id="44eec7ee-55af-44f5-9795-bf5b1ad16da4" name="get-orders-sub-flow" />
+        <flow-ref doc:name="get-orders-sub-flow" doc:id="44eec7ee-55af-44f5-9795-bf5b1ad16da4" name="get-orders-sub-flow" />
     </flow>
     <flow name="post:\orders:application\json:api-config">
-		<flow-ref doc:name="post-order-sub-flow" doc:id="b3bb1980-205f-4418-9e97-13008ae7a653" name="post-order-sub-flow" />
+        <flow-ref doc:name="post-order-sub-flow" doc:id="b3bb1980-205f-4418-9e97-13008ae7a653" name="post-order-sub-flow" />
     </flow>
 </mule>

@@ -1,11 +1,9 @@
 <?xml version="1.0" encoding="UTF-8"?>
-<mule xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd  http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd
-http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd
-http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
+<mule xmlns="http://www.mulesoft.org/schema/mule/core" xmlns:api-gateway="http://www.mulesoft.org/schema/mule/api-gateway" xmlns:apikit="http://www.mulesoft.org/schema/mule/mule-apikit" xmlns:doc="http://www.mulesoft.org/schema/mule/documentation" xmlns:http="http://www.mulesoft.org/schema/mule/http" xmlns:secure-properties="http://www.mulesoft.org/schema/mule/secure-properties" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:schemaLocation=" http://www.mulesoft.org/schema/mule/mule-apikit http://www.mulesoft.org/schema/mule/mule-apikit/current/mule-apikit.xsd  http://www.mulesoft.org/schema/mule/http http://www.mulesoft.org/schema/mule/http/current/mule-http.xsd http://www.mulesoft.org/schema/mule/core http://www.mulesoft.org/schema/mule/core/current/mule.xsd http://www.mulesoft.org/schema/mule/secure-properties http://www.mulesoft.org/schema/mule/secure-properties/current/mule-secure-properties.xsd http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/mule/api-gateway/current/mule-api-gateway.xsd">
     <http:listener-config name="api-httpListenerConfig">
         <http:listener-connection host="${listener.host}" port="${listener.port}" />
     </http:listener-config>
-    <apikit:config name="api-config" api="resource::94ae4f55-1948-49e6-aa22-797c335784d4:jfc-yummy-app-xapi:1.0.4:raml:zip:api.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
+    <apikit:config name="api-config" api="resource::94ae4f55-1948-49e6-aa22-797c335784d4:jfc-yummy-app-xapi:1.0.5:raml:zip:api.raml" outboundHeadersMapName="outboundHeaders" httpStatusVarName="httpStatus" />
     <http:request-config name="OrderSAPI" doc:name="HTTP Request configuration" doc:id="ad32c22b-29be-44a2-a36e-d1fca402e45a" basePath="${order-sapi.base}">
         <http:request-connection protocol="${order-sapi.protocol}" host="${order-sapi.host}" port="${order-sapi.port}" />
         <http:default-headers>
@@ -14,10 +12,10 @@ http://www.mulesoft.org/schema/mule/api-gateway http://www.mulesoft.org/schema/m
         </http:default-headers>
     </http:request-config>
     <configuration-properties doc:name="Configuration properties" doc:id="dc7ae960-da47-4754-97f2-9190b2dc0473" file="properties/common.yaml" />
-	<secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="036bd6fe-8c43-420d-bcf6-8386070194f2" file="properties/sandbox.yaml" key="${enc.key}" >
-		<secure-properties:encrypt algorithm="Blowfish" />
-	</secure-properties:config>
-	<configuration-properties doc:name="Configuration properties" doc:id="bac3cb13-21bf-4d44-9372-88ad3da82efd" file="properties/sandbox.yaml" />
-	<global-property doc:name="Global Property" doc:id="e588ba54-8374-439f-b4d8-6768f240d66e" doc:description="DUMMY VALUE ONLY for build and design time" name="enc.key" value="dummy-value" />
-	<api-gateway:autodiscovery apiId="${api-id}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="652d2d0f-7361-4f16-8da5-1af9f0bfd8ce" flowRef="api-main" />
+    <secure-properties:config name="Secure_Properties_Config" doc:name="Secure Properties Config" doc:id="036bd6fe-8c43-420d-bcf6-8386070194f2" file="properties/sandbox.yaml" key="${enc.key}">
+        <secure-properties:encrypt algorithm="Blowfish" />
+    </secure-properties:config>
+    <configuration-properties doc:name="Configuration properties" doc:id="bac3cb13-21bf-4d44-9372-88ad3da82efd" file="properties/sandbox.yaml" />
+    <global-property doc:name="Global Property" doc:id="e588ba54-8374-439f-b4d8-6768f240d66e" doc:description="DUMMY VALUE ONLY for build and design time" name="enc.key" value="dummy-value" />
+    <api-gateway:autodiscovery apiId="${api-id}" ignoreBasePath="true" doc:name="API Autodiscovery" doc:id="652d2d0f-7361-4f16-8da5-1af9f0bfd8ce" flowRef="api-main" />
 </mule>
