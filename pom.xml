@@ -53,17 +53,17 @@
 			<classifier>mule-plugin</classifier>
 		</dependency>
 		<dependency>
-			<groupId>94ae4f55-1948-49e6-aa22-797c335784d4</groupId>
-			<artifactId>jfc-yummy-app-xapi</artifactId>
-			<version>1.0.4</version>
-			<classifier>raml</classifier>
-			<type>zip</type>
-		</dependency>
-		<dependency>
 			<groupId>com.mulesoft.modules</groupId>
 			<artifactId>mule-secure-configuration-property-module</artifactId>
 			<version>1.2.7</version>
 			<classifier>mule-plugin</classifier>
+		</dependency>
+		<dependency>
+			<groupId>94ae4f55-1948-49e6-aa22-797c335784d4</groupId>
+			<artifactId>jfc-yummy-app-xapi</artifactId>
+			<version>1.0.5</version>
+			<classifier>raml</classifier>
+			<type>zip</type>
 		</dependency>
 	</dependencies>
 
